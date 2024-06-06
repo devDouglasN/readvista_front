@@ -1,1 +1,12 @@
-<p>navbar works!</p>
+<mat-toolbar color="primary" class="navbar">
+  <span class="logo">
+    <img src="path/to/logo.png" alt="Logo" class="logo-img">
+  </span>
+  <a mat-button [routerLink]="'/'">Home</a>
+  <a mat-button [routerLink]="'/catalog'">Catálogo de Livros</a>
+  <a mat-button [routerLink]="'/loans'">Empréstimos</a>
+  <a mat-button [routerLink]="'/returns'">Devoluções</a>
+  <a mat-button [routerLink]="'/contact'">Contato</a>
+</mat-toolbar>
+
+

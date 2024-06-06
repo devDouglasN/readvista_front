@@ -1,0 +1,23 @@
+.navbar {
+  background-color: #000;
+  color: #fff;
+}
+
+.navbar a {
+  color: #fff;
+  margin-right: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  margin-right: 20px;
+}
+
+mat-sidenav {
+  width: 250px;
+}
