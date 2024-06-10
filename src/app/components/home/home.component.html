@@ -1,1 +1,37 @@
-<p>home works!</p>
+<section id="livros" class="livros section">
+  <div class="d-flex justify-content-center">
+    <h2 class="h2 titulo-section move-up">Livros Disponíveis para Empréstimo</h2>
+  </div>
+  <swiper-container [config]="config" loop="true" navigation="true" pagination="true">
+    <swiper-slide *ngFor="let livro of livros1" class="swiper_slide">
+      <div class="livro-card">
+        <div class="livro-header">
+          <img [src]="livro.img" [alt]="livro.title">
+        </div>
+        <div class="livro-conteudo">
+          <h3>{{ livro.title }}</h3>
+          <button *ngIf="livro.available" class="btn-emprestimo" routerLink="/emprestimo">Empréstimo</button>
+          <p *ngIf="!livro.available" class="unavailable">Indisponível</p>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <div class="d-flex justify-content-center mt-5">
+    <h2 class="h2 titulo-section move-up">I Love HQ's</h2>
+  </div>
+  <swiper-container [config]="config" loop="true" navigation="true" pagination="true">
+    <swiper-slide *ngFor="let livro of livros2" class="swiper_slide">
+      <div class="livro-card">
+        <div class="livro-header">
+          <img [src]="livro.img" [alt]="livro.title">
+        </div>
+        <div class="livro-conteudo">
+          <h3>{{ livro.title }}</h3>
+          <button *ngIf="livro.available" class="btn-emprestimo" routerLink="/emprestimo">Empréstimo</button>
+          <p *ngIf="!livro.available" class="unavailable">Unavailable</p>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</section>
