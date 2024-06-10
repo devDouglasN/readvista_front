@@ -1,0 +1,152 @@
+.move-down {
+  margin-top: 3em;
+  position: relative;
+  font-weight: bold;
+}
+
+.livros-cards-container {
+  position: relative;
+  top: 0em;
+  overflow: hidden;
+  width: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
+  box-shadow: 0 15px 30px rgba(255, 17, 17, 0.25);
+  padding-top: 0.62em;
+  background-color: #b1b0b01a;
+}
+
+.my_swiper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.swiper_slide {
+  flex: 0 0 calc(26% - 30px);
+  max-width: calc(100% - 20px);
+  box-sizing: border-box;
+  margin: 10px;
+
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+}
+
+.swiper-container-free-mode > .swiper_slide {
+  transition-timing-function: linear;
+}
+
+.livro-card {
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.13);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  height: 300px;
+  width: 200px;
+  height: 370px;
+  margin-bottom: 2em;
+  list-style: none;
+  text-align: center;
+  transition: all .1s;
+}
+
+.livro-card:hover {
+  border: 1px solid #D49BB0;
+  transform: scale(1.1);
+  overflow: auto;
+}
+
+.swiper-pagination-bullet {
+  background: #f3f3f3;
+}
+
+.swiper-pagination-bullet-active {
+  background: #D49BB0;
+}
+
+.livro-header {
+  height: 160px;
+  transition: all 1s;
+  max-width: 100%;
+}
+
+.livro-header img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.livro-conteudo {
+  background-color: #313131;
+  padding: 10px 6px;
+  overflow: auto;
+}
+
+.livro-conteudo p {
+  font-size: 1.1em;
+  overflow-wrap: break-word;
+}
+
+@media only screen and (max-width: 1000px) {
+  .swiper_slide {
+    flex: 0 0 calc(95% - 20px);
+    max-width: calc(150% - 20px);
+  }
+
+  .livro-conteudo {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .livros-cards-container {
+    flex-direction: column;
+  }
+  .livro-card {
+    width: 90vw;
+    margin: 10px auto;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .swiper_slide {
+    flex: 0 0 calc(100% - 20px);
+    max-width: calc(100% - 20px);
+  }
+
+  .livro-conteudo {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .livros-cards-container {
+    flex-direction: column;
+  }
+  .livro-card {
+    width: 90vw;
+    margin: 10px auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .swiper_slide {
+    flex: 0 0 calc(100% - 20px);
+    max-width: calc(100% - 20px);
+  }
+
+  .livro-conteudo {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .livros-cards-container {
+    flex-direction: column;
+  }
+
+  .livro-card {
+    width: 90vw;
+    margin: 10px auto;
+  }
+}

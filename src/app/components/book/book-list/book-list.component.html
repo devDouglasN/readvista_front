@@ -1,1 +1,18 @@
-<p>book-list works!</p>
+<!-- Template do Angular -->
+<swiper-container [config]="config" loop="true" navigation="true" pagination="true">
+  <swiper-slide *ngFor="let livro of livros" class="swiper_slide">
+    <div class="livro-card">
+      <div class="livro-header">
+        <img [src]="livro.imagePath" alt="{{ livro.title }}">
+      </div>
+      <div class="livro-conteudo">
+        <h3>{{ livro.title }}</h3> <!-- Título do livro -->
+        <p>Autor: {{ livro.author }}</p> <!-- Autor do livro -->
+        <p>Ano: {{ livro.yearOfPublication }}</p> <!-- Ano de publicação -->
+        <p>Status: {{ livro.status }}</p> <!-- Status do livro -->
+        <p>Condição: {{ livro.bookCondition }}</p> <!-- Condição do livro -->
+        <p>Ativo: {{ livro.active ? 'Sim' : 'Não' }}</p> <!-- Status ativo ou não -->
+      </div>
+    </div>
+  </swiper-slide>
+</swiper-container>
