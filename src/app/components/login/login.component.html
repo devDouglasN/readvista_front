@@ -1,14 +1,22 @@
 <div class="login-container">
   <div class="login-box">
     <h2 class="login-title">Entrar</h2>
-    <form>
+    <form (ngSubmit)="login()">
       <div class="input-group">
-        <input type="email" placeholder="Email" class="input-field">
+        <input type="email" placeholder="Email" class="input-field" [formControl]="email">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)">
+          <div *ngIf="email.errors?.['required']">Email é obrigatório.</div>
+          <div *ngIf="email.errors?.['email']">Email inválido.</div>
+        </div>
       </div>
       <div class="input-group">
-        <input type="password" placeholder="Senha" class="input-field">
+        <input type="password" placeholder="Senha" class="input-field" [formControl]="password">
+        <div *ngIf="password.invalid && (password.dirty || password.touched)">
+          <div *ngIf="password.errors?.['required']">Senha é obrigatória.</div>
+          <div *ngIf="password.errors?.['minlength']">Senha deve ter pelo menos 3 caracteres.</div>
+        </div>
       </div>
-      <button type="submit" class="btn-primary">ENTRAR</button>
+      <button type="submit" class="btn-primary" [disabled]="email.invalid || password.invalid">ENTRAR</button>
       <div class="separator"></div>
       <button type="button" class="btn-google">Entrar com Google</button>
       <button type="button" class="btn-discord">Entrar com Discord</button>
