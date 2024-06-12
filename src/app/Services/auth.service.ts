@@ -7,7 +7,7 @@ import { API_CONFIG } from '../Config/api-config';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthServiceService {
+export class AuthService {
 
 
   jwtService: JwtHelperService = new JwtHelperService();
