@@ -1,5 +1,6 @@
 export interface Book {
   id?:                  any;
+  imagePath?:           string
   title?:               string;
   author?:              string;
   yearOfPublication?:   string;
